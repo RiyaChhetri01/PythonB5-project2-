@@ -1,60 +1,88 @@
-# PythonB5-project2-
-calculator making
-# GUI Calculator 🧮
+# PythonB5-Project2
 
-A simple calculator built with Python's `tkinter` library. Here's the main code:
+This repository contains *Project 2*, developed as part of the Python B5 series. The project showcases essential Python programming skills and leverages key concepts to create a functional application.
 
-## Calculator Code
+---
 
-```python
-from tkinter import *
+## Project Overview
 
-first_number = second_number = operator = None
+This project implements a *Calculator Application* using Python's ⁠ tkinter ⁠ library. The calculator supports basic arithmetic operations with an interactive graphical user interface (GUI).
 
-def get_digit(digit):
-    current = result_label['text']
-    new = current + str(digit)
-    result_label.config(text=new)
+---
 
-def clear():
-    result_label.config(text='')
+## Features
 
-def get_operator(op):
-    global first_number, operator
-    first_number = int(result_label['text'])
-    operator = op
-    result_label.config(text='')
+•⁠  ⁠Interactive GUI built with ⁠ tkinter ⁠.
+•⁠  ⁠Supports basic operations: addition, subtraction, multiplication, and division.
+•⁠  ⁠Error handling for division by zero.
+•⁠  ⁠Clear button to reset the calculator.
+•⁠  ⁠Responsive and visually appealing layout.
 
-def get_result():
-    global first_number, second_number, operator
-    second_number = int(result_label['text'])
-    if operator == '+':
-        result_label.config(text=str(first_number + second_number))
-    elif operator == '-':
-        result_label.config(text=str(first_number - second_number))
-    elif operator == '*':
-        result_label.config(text=str(first_number * second_number))
-    else:
-        if second_number == 0:
-            result_label.config(text='Error')
-        else:
-            result_label.config(text=str(round(first_number / second_number, 2)))
+---
 
-root = Tk()
-root.title('Calculator')
-root.geometry('300x380')
-root.resizable(0, 0)
-root.configure(background='black')
+## Requirements
 
-result_label = Label(root, text='', bg='black', fg='white')
-result_label.grid(row=0, column=0, columnspan=5, pady=(50, 25), sticky='w')
-result_label.config(font=('verdana', 30, 'bold'))
+Ensure the following requirements are met before running the project:
 
-btn7 = Button(root, text='7', bg='#00a65a', fg='black', width=5, height=2, command=lambda: get_digit(7))
-btn7.grid(row=1, column=0)
-btn7.config(font=('verdana', 14))
+•⁠  ⁠Python 3.x installed on your system.
+•⁠  ⁠No external libraries are required; it uses Python's built-in ⁠ tkinter ⁠ library.
 
-# Add similar code for other buttons here
+---
 
-root.mainloop()
+## How to Run
 
+1.⁠ ⁠Clone the repository:
+
+   ⁠ bash
+   git clone https://github.com/RiyaChhetri01/PythonB5-project2-.git
+   cd PythonB5-project2-
+    ⁠
+
+2.⁠ ⁠Run the Python script:
+
+   ⁠ bash
+   python calculator.py
+    ⁠
+
+3.⁠ ⁠Use the GUI to perform calculations.
+
+---
+
+## Project Structure
+
+The repository contains:
+
+•⁠  ⁠*⁠ calculator.py ⁠*: The main Python script implementing the calculator.
+
+---
+
+## Demo
+
+Here's a snapshot of the calculator interface:
+
+(Add a screenshot of the calculator here)
+
+---
+
+## Contributing
+
+Contributions are welcome! If you'd like to improve the project or add new features, feel free to fork the repository and create a pull request.
+
+1.⁠ ⁠Fork the repository.
+2.⁠ ⁠Create a new branch for your changes.
+3.⁠ ⁠Commit and push your changes.
+4.⁠ ⁠Submit a pull request.
+
+---
+
+
+## Contact
+
+For any questions or suggestions, feel free to reach out:
+
+•⁠  ⁠GitHub: [RiyaChhetri01](https://github.com/RiyaChhetri01)
+
+---
+
+Thank you for checking out this project! 😊
+```
